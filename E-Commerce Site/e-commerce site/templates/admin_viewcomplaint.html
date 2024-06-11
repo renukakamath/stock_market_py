@@ -1,0 +1,38 @@
+{% include 'adminheader.html'%}
+<section id="main-slider">
+      
+            <div class="item" style="background-image: url(/static/images/slider/bg2.jpg);height: 200px">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                	</div></div></div></div></div></div></section>
+<center>
+	<h1>View Complaints</h1>
+	<table  class="table" style="width: 500px">
+		<tr>
+			<th>Slno</th>
+			<th>Users</th>
+			<th>Complaints</th>
+			
+			<th>Date</th>
+			<th>reply</th>
+		</tr>
+		{% for row in data['us']%}
+		<tr>
+			<td>{{loop.index}}</td>
+			<td>{{row['first_name']}}</td>
+			<td>{{row['complaint']}}</td>
+			
+			<td>{{row['date_time']}}</td>
+			{% if row['reply']=="pending"%}
+			<td><a class="btn btn-success" href="admin_sendreply?cid={{row['complaint_id']}}">Send Reply</a></td>
+			{% else %}
+			<td>{{row['reply']}}</td>
+			{% endif %}
+		</tr>
+		{% endfor %}
+	</table>
+</center>
+{% include 'footer.html'%}

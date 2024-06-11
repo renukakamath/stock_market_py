@@ -1,0 +1,64 @@
+{% include 'publicheader.html'%}
+ <section id="main-slider">
+            <div class="item" style="background-image: url(/static/images/slider/bg1.jpg);height: 700px">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                	
+
+<center>
+	<h2>User Registration</h2>
+	<form method="post">
+		<table  class="table" style="width: 500px">
+			<tr>
+				<th>First Name</th>
+				<td><input type="text" class="form-control" required=""  name="fname"></td>
+			</tr>
+			<tr>
+				<th>Last Name</th>
+				<td><input type="text" class="form-control" required=""  name="lname"></td>
+			</tr>
+			<tr>
+				<th>Address</th>
+				<td><textarea name="add" class="form-control" required="" ></textarea></td>
+			</tr>
+
+			<tr>
+				<th>Place</th>
+				<td><input type="text" class="form-control" required=""  name="place"></td>
+			</tr>
+			<tr>
+				<th>Land mark</th>
+				<td><input type="text" class="form-control" required=""  name="lmark"></td>
+			</tr>
+			<tr>
+				<th>Pincode</th>
+				<td><input type="text" class="form-control" required=""  name="pincode"></td>
+			</tr>
+
+			<tr>
+				<th>Phone</th>
+				<td><input type="text" class="form-control" required=""  name="phone"></td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td><input type="email" class="form-control" required=""  name="email"></td>
+			</tr>
+			<tr>
+				<th>User Name</th>
+				<td><input type="text" class="form-control" required=""  name="uname"></td>
+			</tr>
+			<tr>
+				<th>Password</th>
+				<td><input type="password" class="form-control" required=""  name="pwd"></td>
+			</tr>
+			<tr>
+				<td align="center" colspan="2"><input type="submit" class="btn btn-success" name="userreg"></td>
+			</tr>
+		</table>
+	</form>
+</center>
+</div></div></div></div></div></div></section>
+{% include 'footer.html'%}

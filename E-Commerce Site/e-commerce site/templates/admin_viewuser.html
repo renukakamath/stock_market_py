@@ -1,0 +1,40 @@
+{% include 'adminheader.html'%}
+
+            <div class="item" style="background-image: url(/static/images/slider/bg2.jpg);height: 200px">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                	</div></div></div></div></div></div></section>
+<center>
+	<h1>View Users</h1>
+	<table  class="table" style="width: 500px">
+		<tr>
+			<th>Slno</th>
+		   <th>first Name</th>
+		    <th>last Name</th>
+		     <th>house Name</th>
+		   	<th>Place</th>
+		   	<th>Land mark</th>
+		   	 <th>Pincode </th>
+     		<th>Phone</th>
+   			<th>Email</th>
+		</tr>
+		{% for row in data['us']%}
+		<tr>
+			<td>{{loop.index}}</td>
+			<td>{{row['first_name']}}</td>
+			<td>{{row['last_name']}}</td>
+			<td>{{row['house_name']}}</td>
+			<td>{{row['place']}}</td>
+			<td>{{row['landmark']}}</td>
+			<td>{{row['pincode']}}</td>
+			<td>{{row['phone']}}</td>
+			<td>{{row['email']}}</td>
+		
+		</tr>
+		{% endfor %}
+	</table>
+</center>
+{% include 'footer.html'%}

@@ -1,0 +1,47 @@
+{% include 'userheader.html'%}
+<section id="main-slider">
+      
+            <div class="item" style="background-image: url(/static/images/slider/bg2.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+<center>
+
+	<h2>Send Complaints</h2>
+	<form method="post">
+	<table  class="table" style="width: 500px">
+		<tr>
+			<th>Complaint</th>
+			<td><input type="text" class="form-control" required=""  name="comp"></td>
+		</tr>
+		<tr>
+			<td align="center" colspan="2"><input type="submit" class="btn btn-success" name="complaint"></td>
+		</tr>
+	</table>
+	</form>
+</center>
+</div></div></div></div></div></div></section>
+<center>
+	<h1>View Complaints</h1>
+	<table  class="table" style="width: 500px">
+		<tr>
+			<th>Slno</th>
+			<th>User</th>
+			<th>Complaint</th>
+			<th>Reply</th>
+			<th>Date Time</th>
+		</tr>
+		{% for row in data['comp']%}
+		<tr>
+			<td>{{loop.index}}</td>
+			<td>{{row['first_name']}}</td>
+			<td>{{row['complaint']}}</td>
+			<td>{{row['reply']}}</td>
+			<td>{{row['date_time']}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</center>
+{% include 'footer.html'%}
